@@ -1,0 +1,38 @@
+#this code finds the user's term of the fibonacci sequence which they input 
+
+a = 0
+b = 1
+
+
+term = int(input("Which term would you like to find out?"))
+
+if term == 1:
+    print (0)
+if term == 2:
+    print (1)
+else:
+    for i in range (3, term +1):
+        c = a + b
+        a = b
+        b = c
+        print (b)
+
+
+# The aim of this code is to find an approximation of the golden ratio to x decimal places
+
+x = int(input("To how many decimal places would you like to calculate the golden ratio?"))
+
+term = 999999
+
+a = 1
+b = 1
+
+
+
+for i in range (3, term +1):
+    c = a + b
+    if abs (b/a - c/b) < 10 ** -x :
+        print ("The golden ratio is : " , round(10 ** x *c/b)/10 ** x)
+        break   
+    a = b
+    b = c
